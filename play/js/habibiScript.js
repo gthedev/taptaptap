@@ -452,12 +452,12 @@ var gameEngine = {
     gameEngine.checkTapsCount(); // check if taps finished
     toolsBox.toggleAnimation(gmStatsCurrentTapCount, 'burst-animation');
     audioPool.playSound(touchBlue);
-    ga('send', 'event', 'Circle_Tap', 'Good'); // Google analytics events
+    // ga('send', 'event', 'Circle_Tap', 'Good'); // Google analytics events
   },
   evilCircleTap: function() {
     gameEngine.deadlyTap();
     audioPool.playSound(touchRed);
-    ga('send', 'event', 'Circle_Tap', 'Evil'); // Google analytics events
+    // ga('send', 'event', 'Circle_Tap', 'Evil'); // Google analytics events
   },
   pause: function() {
     timeEngine.stop();
