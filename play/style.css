@@ -25,7 +25,7 @@ html {
 body{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2.2rem; /* base font size is 22px */
-  background: #0B1D31;
+  background: #000;
   color: white;
   overflow: hidden; /* always hide scrollbars */
   text-transform: uppercase;
