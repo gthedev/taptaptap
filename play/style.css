@@ -38,7 +38,7 @@ body, h1,h2,h3, p, menu, button{
 }
 
 a {
-  color: #58D1FF;
+  color: #f8b500;
   text-decoration: none;
   padding: 10px 0;
   display: inline-block;
@@ -204,7 +204,7 @@ hr {
 }
 
 .gm-stats-time-progress {
-  background: #58D1FF;
+  background: #f8b500;
   width: 100%;
   height: 4%;
   transition: all ease 0.2s;
@@ -239,7 +239,7 @@ hr {
 
 .gm-stats-tap-count {
   display: inline-block;
-  color: #58D1FF;
+  color: #f8b500;
 }
 
 .stat-wrapper {
@@ -304,11 +304,11 @@ hr {
 }
 
 .c-blue {
-  box-shadow: inset 0 0 0 17px #58D1FF;
+  box-shadow: inset 0 0 0 17px #f8b500;
   z-index: 3;
 }
 .c-blue::before, .c-blue::after {
-  box-shadow: inset 0 0 0 2px #58D1FF;
+  box-shadow: inset 0 0 0 2px #f8b500;
 }
 
 .c-red {
@@ -369,11 +369,11 @@ hr {
   margin: 0 auto 1.5em;
   width: 3.5em;
   height: 3.5em;
-  box-shadow: inset 0 0 0 1.4em #58D1FF;
+  box-shadow: inset 0 0 0 1.4em #f8b500;
 }
 
 .gm-menu-logo-bg::before, .gm-menu-logo-bg::after {
-  box-shadow: inset 0 0 0 2px #58D1FF;
+  box-shadow: inset 0 0 0 2px #f8b500;
 }
 
 .gm-menu-title, .gm-menu-subtitle {
@@ -388,7 +388,7 @@ hr {
 .gm-menu-subtitle {
   font-size: 1em;
   font-weight: 400;
-  color: #58D1FF;
+  color: #f8b500;
 }
 
 .gm-btn {
@@ -414,11 +414,11 @@ hr {
 }
 
 .btn-blue {
-  border-color: #58D1FF;
+  border-color: #f8b500;
   font-weight: 600;
 }
 .btn-blue:active {
-  background: #58D1FF;
+  background: #f8b500;
 }
 
 
@@ -733,7 +733,7 @@ hr {
   background-color: #FA4760;
   }
   100% {
-    background-color: #58D1FF;
+    background-color: #f8b500;
   }
 }
 .switchColors-animation {

@@ -1,17 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Do after the document fully loaded
-});
-
-
-// ===============================================================
-// ================== SHOW/HIDE PAGES - ADMIN ====================
-// ===============================================================
-var adminCPItems = document.querySelector('.admin-cp-items');
-var adminCPBtn = document.querySelector('.admin-cp-button');
-adminCPBtn.addEventListener('click', function(){ adminCPItems.classList.toggle('hidden'); }, false);
-
-
-
 // ---------------------- Pages ---------------------- //
 
 // Splash Page
@@ -91,23 +77,6 @@ var pageAbout = document.querySelector('#pageAbout');
 var abtPageBackBtn = document.querySelector('#abtPageBackBtn');
 
 
-// ------- Show Hide Pages Control Panel ------- //
-var playDelayPageToggle = document.getElementById('playDelayPageToggle');
-var playAreaPageToggle = document.getElementById('playAreaPageToggle');
-var gameMenuPageToggle = document.getElementById('gameMenuPageToggle');
-var tutorialPageToggle = document.getElementById('tutorialPageToggle');
-var pauseMenuPageToggle = document.getElementById('pauseMenuPageToggle');
-var levelPassedPageToggle = document.getElementById('levelPassedPageToggle');
-var youLostPageToggle = document.getElementById('youLostPageToggle');
-var highScorePageToggle = document.getElementById('highScorePageToggle');
-var aboutPageToggle = document.getElementById('aboutPageToggle');
-var splashPageToggle = document.getElementById('splashPageToggle');
-
-var pagesTogglesArray = [
-  playAreaPageToggle, gameMenuPageToggle, tutorialPageToggle, playDelayPageToggle,
-  pauseMenuPageToggle, levelPassedPageToggle,
-  youLostPageToggle, highScorePageToggle, aboutPageToggle, splashPageToggle
-]
 var pagesArray = [
   pagePlayArea, pageGameMenu, pageTutorial, pagePlayDelay,
   pagePauseMenu, pageLevelPassed,
@@ -121,15 +90,6 @@ togglePage = function(pageToggle, page) {
   } else {
     toolsBox.hidePage(page);
   }
-}
-
-// on click event to all toggles on the page to show/hide pages
-for (var i = 0; i < pagesTogglesArray.length; i++) {
-  pagesTogglesArray[i].addEventListener('click', function(){
-    for (var i = 0; i < pagesTogglesArray.length; i++) {
-      togglePage(pagesTogglesArray[i], pagesArray[i]);
-    }
-  }, false);
 }
 // ===============================================================
 // ===============================================================
@@ -382,7 +342,7 @@ var gameEngine = {
   },
   updateLevel: function(levelNum) { // Update the level number in the game space and add to engine
     gameEngine.levelNum = levelNum;
-    gmStatsLvlNumb.innerHTML = "Level " + gameEngine.levelNum;
+    gmStatsLvlNumb.innerHTML = gameEngine.levelNum + " Lygis";
   },
   updateTapCount: function(tapNum, tapsGoal) { // Update tabs count in the game space & add to engine
     gameEngine.tapNum = tapNum;
@@ -424,7 +384,6 @@ var gameEngine = {
     timeEngine.reset();
     timeEngine.start(time);
 
-    console.log('Game Started! 🏁');
   },
   startLevel: function() { // start level using the current level value in the game engine
     gameEngine.start(
@@ -467,7 +426,6 @@ var gameEngine = {
   },
   stop: function() { // stop the game and reset level values
     timeEngine.stop();
-    console.log('game STOPPED!');
     gameEngine.reset();
   },
   gameLost: function() {
@@ -479,8 +437,7 @@ var gameEngine = {
 
   },
   deadlyTap: function() { // tapping a red circle
-    console.log('You lost! 🐜');
-    lvlLostTtl.innerHTML = "You Lost";
+    // lvlLostTtl.innerHTML = "You Lost";
     if (lvlLostIcon.classList.contains('times-up-icon')) {
       lvlLostIcon.classList.remove('times-up-icon');
       lvlLostIcon.classList.add('you-lost-icon');
@@ -488,8 +445,7 @@ var gameEngine = {
     gameEngine.gameLost();
   },
   timesUp: function() {
-    console.log('time is up! ⏱');
-    lvlLostTtl.innerHTML = "Time's Up";
+    // lvlLostTtl.innerHTML = "Time's Up";
     if (lvlLostIcon.classList.contains('you-lost-icon')) {
       lvlLostIcon.classList.remove('you-lost-icon');
       lvlLostIcon.classList.add('times-up-icon');
@@ -497,12 +453,11 @@ var gameEngine = {
     gameEngine.gameLost();
   },
   levelPassed: function() {
-    console.log('Level passed! 💃');
     audioPool.playSound(levelPassed);
     timeEngine.stop(); // stop the count down
 
     // update level passed page info
-    lvlPssdTtl.innerHTML = "Level " + gameEngine.levelNum;
+    lvlPssdTtl.innerHTML = gameEngine.levelNum + " Lygis";
     if (gameEngine.bonusScore > 0) { // if there is a bonus, display score without bonus
       lvlPssdScore.innerHTML = gameEngine.score - gameEngine.bonusScore;
     } else {
@@ -525,11 +480,6 @@ var gameEngine = {
     toolsBox.showPage(pageLevelPassed);
   },
   showBonusScore: function() {
-    console.log('You got '
-    + Math.round(timeEngine.timeLeft) * 10
-    + " extra score because you finished "
-    + timeEngine.timeLeft
-    + " seconds before the time!" );
     gameEngine.updateBonusScore(Math.round(timeEngine.timeLeft, 10) * 10);
     if (gameEngine.bonusScore > 0) { // if theere is some bonus score show it on level passed page
       lvlPssdBonusScore.innerHTML = "Bonus +" + gameEngine.bonusScore;

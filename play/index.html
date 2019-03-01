@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Tap Tap Tap - Open source tapping game built with Javascript</title>
-	<meta name="description" content="Open source tapping game built with Javascript"/>
+	<title>Tap Tap Tap</title>
+	<meta name="description" content="Tap Tap Tap"/>
 	<link href="style.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -22,61 +22,13 @@
 
 	<!-- OG Details -->
 	<meta property="og:title" content="TapTapTap" />
-	<meta property="og:description" content="Open source tapping game built with Javascript" />
-	<meta property="og:site_name" content="TapTapTap - Open source tapping game built with Javascript" />
+	<meta property="og:description" content="Tap Tap Tap" />
+	<meta property="og:site_name" content="Tap Tap Tap" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://taptaptap.click/" />
 	<meta property="og:image" content="https://taptaptap.click/images/im-og_image.png" />
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3416596-20"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-3416596-20');
-	</script>
 
 </head>
 <body ontouchstart="">
-
-	<div class="admin-cp">
-		<button class="admin-cp-button" type="button" name="button">Hide / Show Panel</button>
-		<div class="admin-cp-items hidden">
-			<label class="vzbltyLabel" for="splashPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="splashPageToggle">Splash Page
-			</label>
-			<label class="vzbltyLabel" for="gameMenuPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="gameMenuPageToggle" checked="checked">Game Menu Page
-			</label>
-			<label class="vzbltyLabel" for="aboutPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="aboutPageToggle">About Page
-			</label>
-			<label class="vzbltyLabel" for="highScorePageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="highScorePageToggle">High Score Page
-			</label>
-			<label class="vzbltyLabel" for="tutorialPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="tutorialPageToggle">Tutorial Page
-			</label>
-			<label class="vzbltyLabel" for="playDelayPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="playDelayPageToggle">PLay Delay Page
-			</label>
-
-			<label class="vzbltyLabel" for="playAreaPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="playAreaPageToggle">PLay Area Page
-			</label>
-			<label class="vzbltyLabel" for="pauseMenuPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="pauseMenuPageToggle">Pause Menu Page
-			</label>
-			<label class="vzbltyLabel" for="youLostPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="youLostPageToggle">You Lost Page
-			</label>
-			<label class="vzbltyLabel" for="levelPassedPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="levelPassedPageToggle">Level Passed Page
-			</label>
-		</div>
-	</div>
 
 	<div class="main-wrapper">
 
@@ -85,7 +37,7 @@
 			<div class="fixed-75w-wrapper">
 				<div id="splashScreenLogo" class="tpbl-circle c-white splash-screen-logo"></div>
 				<div id="splashScreenTxt">
-					Loading AWESOME STUFF
+					Kraunasi...
 				</div>
 			</div>
 		</div>
@@ -96,11 +48,11 @@
 				<div class="gm-menu-header-cont">
 					<div class="tpbl-circle c-blue gm-menu-logo-bg"></div>
 					<h1 class="gm-menu-title">Tap Tap Tap</h1>
-					<h2 class="gm-menu-subtitle">Every Tap Matters</h2>
+					<h2 class="gm-menu-subtitle">Vykdyk pirmąjį iššūkį</h2>
 				</div>
-				<button id="newGameBtn" class="gm-btn btn-blue" type="button" name="button">New Game</button>
+				<button id="newGameBtn" class="gm-btn btn-blue" type="button" name="button">Pradėti</button>
 				<!-- <button id="highScoresBtn" class="gm-btn" type="button" name="button">Best Score</button> -->
-				<button id="aboutBtn" class="gm-btn" type="button" name="button">About</button>
+				<button id="aboutBtn" class="gm-btn" type="button" name="button">Apie</button>
 			</div>
 		</div>
 
@@ -108,7 +60,7 @@
 		<div id="pageAbout" class="page-cont page-about page-faded-bg anmtd-grdnt-bg blu-grdnt-bg no-bg">
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
-					<div class="info-screen-ttl-txt-bld">About</div>
+					<div class="info-screen-ttl-txt-bld">Apie</div>
 				</div>
 				<div class="info-screen-txt-cont">
 					<div>Created by</div>
@@ -136,16 +88,16 @@
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
 					<div class="info-screen-icon you-lost-icon"></div>
-					<div class="info-screen-ttl-txt-bld">Game Over</div>
-					<div >You Lost</div>
+					<div class="info-screen-ttl-txt-bld">TU LAIMĖJAI!</div>
+					<div>Tau priklauso 100 žetonų!</div>
 				</div>
 				<div class="info-screen-txt-cont">
-					<div class="info-screen-body-txt-reg">Score</div>
+					<div class="info-screen-body-txt-reg">TAŠKAI</div>
 					<div id="lvlLostNewHighScore" class="lvl-fnshd-score-nmb">86</div>
-					<div class="info-screen-body-txt-reg">New High Score</div>
+					<div class="info-screen-body-txt-reg">Naujas Rekordas</div>
 					<div class="lvl-fnshd-highscore-icon"></div>
 				</div>
-				<div class="sbmt-tryagain-txt">Try again?</div>
+				<div class="sbmt-tryagain-txt">BANDYK DAR KARTĄ</div>
 				<div class="tpbl-circle c-white submit-circle"></div>
 			</div>
 		</div>
@@ -155,7 +107,7 @@
 			<div class="fixed-100w-wrapper">
 				<div id="tutPgStartGameBtn" class="tpbl-circle c-blue tut-circle"></div>
 				<div class="tut-arrow"></div>
-				<h2 class="tut-text">TAP THE CIRCLE<br/>TO START</h2>
+				<h2 class="tut-text">NORINT PRADĖTI<br/>SPAUSK ČIA</h2>
 			</div>
 		</div>
 
@@ -184,14 +136,14 @@
 					<!-- score -->
 					<div class="gm-stats-vcont">
 						<div class="stat-wrapper">
-							<div class="gm-stats-title">Score</div>
+							<div class="gm-stats-title">Taškai</div>
 							<div id="gmStatsScore" class="gm-stats-value">2894</div>
 						</div>
 					</div>
 					<!-- level number -->
 					<div class="gm-stats-vcont">
 						<div class="stat-wrapper text-align-right">
-							<div id="gmStatsLvlNumb" class="gm-stats-title">Level 7</div>
+							<div id="gmStatsLvlNumb" class="gm-stats-title">7 Lygis</div>
 							<div class="gm-stats-value">
 								<span id="gmStatsCurrentTapCount" class="gm-stats-tap-count">16</span>
 								<span id="gmStatsTotalTapCount">/20</span>
@@ -213,15 +165,15 @@
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
 					<div class="info-screen-icon puz-icon"></div>
-					<div class="info-screen-ttl-txt-bld">GAME PAUSED</div>
+					<div class="info-screen-ttl-txt-bld">PAUZĖ</div>
 				</div>
 				<div class="info-screen-txt-cont">
-					<div class="info-screen-body-txt-reg">Score</div>
+					<div class="info-screen-body-txt-reg">Taškai</div>
 					<div id="lvlPausedScore" class="lvl-fnshd-score-nmb">521</div>
 				</div>
 				<div class="puz-menu-btnz-cont">
-					<button id="pmCntnuGmBtn" class="gm-btn btn-blue">Continue</button>
-					<button id="pmRstrtLvlBtn" class="gm-btn pm-rstrt-lvl-btn">Restart</button>
+					<button id="pmCntnuGmBtn" class="gm-btn btn-blue">Tęsti</button>
+					<button id="pmRstrtLvlBtn" class="gm-btn pm-rstrt-lvl-btn">Bandyti Iš Naujo</button>
 				</div>
 			</div>
 		</div>
@@ -231,16 +183,16 @@
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
 					<div id="lvlLostIcon" class="info-screen-icon you-lost-icon"></div>
-					<div class="info-screen-ttl-txt-bld">Game Over</div>
-					<div id="lvlLostTtl" >You Lost</div>
+					<div class="info-screen-ttl-txt-bld">TU LAIMĖJAI</div>
+					<div id="lvlLostTtl">Tau priklauso 100 žetonų!</div>
 				</div>
 				<div class="info-screen-txt-cont">
-					<div class="info-screen-body-txt-reg">Score</div>
+					<div class="info-screen-body-txt-reg">Taškai</div>
 					<div id="lvlLostScore" class="lvl-fnshd-score-nmb">746</div>
 					<!-- <div class="info-screen-body-txt-reg">Best Score</div>
 					<div id="lvlLostBestScore" class="lvl-fnshd-score-nmb">146</div> -->
 				</div>
-				<div class="sbmt-tryagain-txt">Try again?</div>
+				<div class="sbmt-tryagain-txt">Bandyk dar kartą</div>
 				<div id="lvlLostTryAgainBtn" class="tpbl-circle c-white submit-circle"></div>
 			</div>
 		</div>
@@ -250,11 +202,11 @@
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
 					<div class="info-screen-icon flag-icon"></div>
-					<div id="lvlPssdTtl">Level 2</div>
-					<div class="info-screen-ttl-txt-bld">Passed</div>
+					<div id="lvlPssdTtl">2 Lygis</div>
+					<div class="info-screen-ttl-txt-bld">Įveiktas</div>
 				</div>
 				<div class="info-screen-txt-cont">
-					<div class="info-screen-body-txt-reg">Score</div>
+					<div class="info-screen-body-txt-reg">Taškai</div>
 					<div id="lvlPssdScore" class="lvl-fnshd-score-nmb">521</div>
 					<div id="lvlPssdBonusScore" class="grow-animation"></div>
 				</div>
