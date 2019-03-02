@@ -60,7 +60,7 @@ hr {
 }
 
 .main-wrapper {
-  background: url('images/backgroundPattern.svg') repeat rgb(11, 29, 49);
+  background: #000;
   width: 100%;
   max-width: 640px;
   height: 640px;
@@ -104,7 +104,6 @@ hr {
   top: 0;
   left: 0;
   z-index: -2;
-  background: rgba(11, 29, 49, 0.9);
 }
 
 /* ::after - Animated Gradient Background */
@@ -355,7 +354,7 @@ hr {
 /*  -------- Game menu page -------- */
 
 .page-game-menu {
-  background: url('images/backgroundPattern.svg') repeat rgb(11, 29, 49);
+  background: #000;
 }
 
 .gm-menu-header-cont {
@@ -424,7 +423,7 @@ hr {
 
 /* Game Tutorial page */
 .page-tutorial {
-  background: url('images/backgroundPattern.svg') repeat rgb(11, 29, 49);
+  background: #000;
   position: relative;
 }
 
