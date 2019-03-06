@@ -61,14 +61,16 @@ hr {
 
 .main-wrapper {
   background: #000;
-  width: 100%;
-  max-width: 500px;
-  height: 500px;
   box-shadow: 0 0 250px 0 rgba(0,0,0,0.4);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100vh;
 }
 
 .fixed-100w-wrapper {
